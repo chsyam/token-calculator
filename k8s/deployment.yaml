@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tokenizer
+  namespace: tokenizer
+  labels:
+    app: tokenizer
+spec:
+  selector:
+    matchLabels:
+      app: tokenizer
+  template:
+    metadata:
+      labels:
+        app: tokenizer
+    spec:
+      containers:
+      - name: tokenizer
+        image: 10.63.20.34:80/tokenizer:latest
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: regcred
