@@ -1,0 +1,24 @@
+queryModel
+-------------
+{
+	"model" :"llama3.2",
+	"prompt":"Genarate a sample python program for prime numbers",
+	"projectName":"nextgen",
+	"username":"srinivas"
+}
+
+
+tokens
+------------
+{
+	"projectName":"nextgen",
+	"prompt":"Hi",
+	"username":"syam"
+}
+
+consumeservice
+--------------
+{
+	"projectName":"nextgen",
+	"service":"rag",
+}
