@@ -22,6 +22,9 @@ public class NewUser {
 	@ElementCollection
 	private List<String> projects;
 
+	@ElementCollection
+	private List<String> models;
+
 	public int getId() {
 		return id;
 	}
@@ -70,8 +73,16 @@ public class NewUser {
 		this.projects = projects;
 	}
 
+	public List<String> getModels() {
+		return models;
+	}
+
+	public void setModels(List<String> models) {
+		this.models = models;
+	}
+
 	public NewUser(int id, String username, int tokens_consumed, int tokens_allocated, double budget_utilized,
-			List<String> projects) {
+			List<String> projects, List<String> models) {
 		super();
 		this.id = id;
 		this.username = username;
@@ -79,6 +90,7 @@ public class NewUser {
 		this.tokens_allocated = tokens_allocated;
 		this.budget_utilized = budget_utilized;
 		this.projects = projects;
+		this.models = models;
 	}
 
 	public NewUser() {

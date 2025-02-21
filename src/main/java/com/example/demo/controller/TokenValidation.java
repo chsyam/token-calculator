@@ -18,7 +18,7 @@ public class TokenValidation {
 	@PostMapping("/validate")
 	public Logs promptValidation(@RequestParam String query) {
 		int token_count = query.split(" ").length;
-		Logs response = tokenService.validatePrompt("syam", "platform-engineering", query,token_count);
+		Logs response = tokenService.validatePrompt("yogesh", "platform-engineering", query, token_count, "codellama");
 		return response;
 	}
 }

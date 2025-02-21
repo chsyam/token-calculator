@@ -16,6 +16,7 @@ public class Logs {
 	private double amount_required;
 	private String username;
 	private String project_name;
+	private String model_name;
 	private String status;
 	private String error_message;
 
@@ -67,6 +68,14 @@ public class Logs {
 		this.project_name = project_name;
 	}
 
+	public String getModel_name() {
+		return model_name;
+	}
+
+	public void setModel_name(String model_name) {
+		this.model_name = model_name;
+	}
+
 	public String getStatus() {
 		return status;
 	}
@@ -84,13 +93,14 @@ public class Logs {
 	}
 
 	public Logs(int id, String prompt, int token_count, double amount_required, String username, String project_name,
-			String status, String error_message) {
+			String model_name, String status, String error_message) {
 		super();
 		this.id = id;
 		this.prompt = prompt;
 		this.token_count = token_count;
 		this.amount_required = amount_required;
 		this.username = username;
+		this.model_name = model_name;
 		this.project_name = project_name;
 		this.status = status;
 		this.error_message = error_message;
